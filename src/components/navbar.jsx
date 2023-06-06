@@ -36,16 +36,15 @@ const NAVLINKS = [
 
 export const Navbar = () => {
   return (
-    <header className="sticky left-0 top-0 flex items-center justify-between gap-6 px-8 py-6 xl:px-0">
-      <Link
-        href="/"
-        className="block h-[36px] w-[150px] lg:h-[50px] lg:w-[207px]"
-      >
-        <Image
-          src={logoElemesid}
-          alt="Elemes Group Logo"
-          className="h-full w-full object-contain"
-        />
+    <header className="sticky left-0 top-0 flex items-center justify-between gap-6 bg-white px-8 py-6 shadow-sm xl:px-0">
+      <Link href="/">
+        <picture className="block h-9 max-h-9 w-full sm:w-[150px] lg:h-[50px] lg:max-h-[50px] lg:w-[207px]">
+          <Image
+            src={logoElemesid}
+            alt="Elemes Group Logo"
+            className="h-full w-full object-contain"
+          />
+        </picture>
       </Link>
 
       <ul className="hidden items-center gap-4 md:flex lg:gap-8">
