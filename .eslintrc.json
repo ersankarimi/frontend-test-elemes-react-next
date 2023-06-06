@@ -12,12 +12,10 @@
     "prettier/prettier": "error",
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",
-    "react/jsx-props-no-spreading": [
-      "error",
-      {
-        "custom": "ignore"
-      }
-    ],
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/extensions": ["error", "never", { "svg": "always" }],
     "react/function-component-definition": [
       "error",
       {
