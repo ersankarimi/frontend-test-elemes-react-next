@@ -11,6 +11,7 @@
     "lint:fix:format": "npm run lint -- --fix && npm run format"
   },
   "dependencies": {
+    "classnames": "^2.3.2",
     "next": "13.4.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
