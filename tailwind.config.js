@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "font-rubik": ["Rubik", "sans-serif"],
+        rubik: ["Rubik", "sans-serif"],
       },
       boxShadow: {
         shadow: "0px 11px 30px rgba(0, 0, 0, 0.1)",
