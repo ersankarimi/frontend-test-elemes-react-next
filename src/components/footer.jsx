@@ -86,7 +86,7 @@ const FOOTER_LINKS_SECTION = [
 
 export const Footer = () => {
   return (
-    <footer className="mt-[201px] flex flex-col justify-between gap-12 px-8 py-4 text-[#757575] md:px-0 md:py-6 xl:px-0">
+    <footer className="mt-36 flex flex-col justify-between gap-12 px-8 py-4 text-[#757575] md:px-0 md:py-6 xl:px-0">
       <div className="hidden flex-col justify-between gap-12 rounded-[20px] bg-brand-primary-lightest px-20 py-20 md:flex lg:flex-row xl:gap-24">
         <section className="flex-col gap-8 text-sm leading-5 md:flex lg:w-3/4">
           <div className="flex-col gap-5 text-sm leading-5 md:flex">
@@ -171,7 +171,7 @@ export const Footer = () => {
       <ul className="flex w-full items-center justify-between md:hidden">
         {["Home", "Promotions", "Others"].map((item) => (
           <li
-            key={`footer-link-item-${item.label}`}
+            key={`footer-link-item-${item}`}
             className="flex flex-col items-center gap-2"
           >
             <button type="button">
