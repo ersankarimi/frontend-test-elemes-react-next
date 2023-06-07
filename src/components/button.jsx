@@ -6,11 +6,12 @@ export const Button = ({ children = null, variant = "primary", ...props }) => {
       type="button"
       {...props}
       className={cn(
-        "flex w-max items-center px-[18px] py-[10px] text-sm font-medium duration-200",
+        "flex w-max items-center gap-3 rounded-[100px] px-[18px] py-[10px] text-sm font-medium duration-200",
         {
-          "rounded-[100px] bg-brand-primary-default text-white hover:brightness-110":
+          "bg-brand-primary-default text-white hover:brightness-110":
             variant === "primary",
-          "rounded-[100px] bg-[#F2F2F2] text-[#333]": variant === "secondary",
+          "bg-[#F2F2F2] text-[#333333] hover:brightness-90":
+            variant === "secondary",
         }
       )}
     >
