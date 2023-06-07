@@ -3,6 +3,15 @@ module.exports = {
   content: ["./src/pages/**/*.{js,jsx}", "./src/components/**/*.{js,jsx}"],
   theme: {
     extend: {
+      screens: {
+        xs: "375px",
+        "2xs": "425px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1440px",
+      },
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],
       },
@@ -35,6 +44,10 @@ module.exports = {
           lime: {
             default: "#A4B441",
             lighter: "#F3F7D9",
+          },
+          gray: {
+            default: "#757575",
+            dark: "#333333",
           },
         },
       },
