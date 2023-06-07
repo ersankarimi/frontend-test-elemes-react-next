@@ -86,7 +86,7 @@ const FOOTER_LINKS_SECTION = [
 
 export const Footer = () => {
   return (
-    <footer className="mt-36 flex flex-col justify-between gap-12 px-8 py-4 text-[#757575] md:px-0 md:py-6 xl:px-0">
+    <footer className="mt-36 flex flex-col justify-between gap-12 px-8 py-4 text-brand-gray-default md:px-0 md:py-6 xl:px-0">
       <div className="hidden flex-col justify-between gap-12 rounded-[20px] bg-brand-primary-lightest px-20 py-20 md:flex lg:flex-row xl:gap-24">
         <section className="flex-col gap-8 text-sm leading-5 md:flex lg:w-3/4">
           <div className="flex-col gap-5 text-sm leading-5 md:flex">
@@ -127,7 +127,9 @@ export const Footer = () => {
           ))}
 
           <div className="flex flex-col gap-8">
-            <h4 className="text-lg font-medium text-[#333333]">Newsletter</h4>
+            <h4 className="text-lg font-medium text-brand-gray-dark">
+              Newsletter
+            </h4>
             <div className="flex flex-col gap-[18px] text-sm">
               <p className="leading-6">
                 Get now free 50% discount for alll products on your first order
@@ -137,7 +139,7 @@ export const Footer = () => {
                 <input
                   type="text"
                   placeholder="Your email address"
-                  className="appearance-none rounded-l-lg border-y border-l border-black bg-transparent px-4 py-2 text-black placeholder:text-sm placeholder:text-[#757575] focus:outline-none"
+                  className="appearance-none rounded-l-lg border-y border-l border-black bg-transparent px-4 py-2 text-black placeholder:text-sm placeholder:text-brand-gray-default focus:outline-none"
                 />
                 <button
                   type="submit"
@@ -188,7 +190,7 @@ export const Footer = () => {
 const FooterLinkSection = ({ title, links }) => {
   return (
     <div className="flex flex-col gap-8">
-      <h4 className="text-lg font-medium text-[#333333]">{title}</h4>
+      <h4 className="text-lg font-medium text-brand-gray-dark">{title}</h4>
       <ul className="flex flex-col gap-[18px] text-sm">
         {links.map((link) => (
           <li key={`footer-link-section-item-${link}`}>

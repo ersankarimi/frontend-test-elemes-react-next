@@ -56,7 +56,7 @@ export const Navbar = () => {
       <div className="flex items-center gap-4 lg:gap-6">
         <Link
           href="/"
-          className="hidden text-sm font-medium text-[#333333] duration-200 hover:brightness-[20%] md:block"
+          className="hidden text-sm font-medium text-brand-gray-dark duration-200 hover:brightness-[20%] md:block"
         >
           Masuk
         </Link>
@@ -88,7 +88,7 @@ export const NavlinkItem = ({
       )}
       <Link
         href={href}
-        className="whitespace-nowrap text-sm font-medium text-[#757575] duration-200 hover:brightness-[20%]"
+        className="whitespace-nowrap text-sm font-medium text-brand-gray-default duration-200 hover:brightness-[20%]"
       >
         {label}
       </Link>
