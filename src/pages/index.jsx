@@ -28,117 +28,7 @@ import pizzaMeatImage from "../../public/images/pizza-meat.png";
 import pizzaPaperonImage from "../../public/images/pizza-paperoni.png";
 import salmonRollImage from "../../public/images/salmon-roll.png";
 
-const CATEGORY_RECEIPT_LIST = [
-  {
-    id: 1,
-    title: "Cupcake",
-    amount: 22,
-    icon: cakeIcon,
-    bgColorHex: "#F0FEEB",
-    href: "/",
-  },
-  {
-    id: 2,
-    title: "Pizza",
-    amount: 25,
-    icon: pizzaIcon,
-    bgColorHex: "#E4F2F4",
-    href: "/",
-  },
-  {
-    id: 3,
-    title: "Kebab",
-    amount: 12,
-    icon: kebabIcon,
-    bgColorHex: "#EAEEFA",
-    href: "/",
-  },
-  {
-    id: 4,
-    title: "Salmon",
-    amount: 22,
-    icon: salmonIcon,
-    bgColorHex: "#F9EEF3",
-    href: "/",
-  },
-  {
-    id: 5,
-    title: "Doughnut",
-    amount: 11,
-    icon: doughnutIcon,
-    bgColorHex: "#F3F7D9",
-    href: "/",
-  },
-];
-
-const TRENDING_RECEIPT_LIST = [
-  {
-    id: 1,
-    title: "Pizza Paperoni",
-    subTitle: "Pizza",
-    rating: 4,
-    imageSource: pizzaPaperonImage,
-    href: "/",
-  },
-  {
-    id: 2,
-    title: "Pizza Meat",
-    subTitle: "Pizza",
-    rating: 3,
-    imageSource: pizzaMeatImage,
-    href: "/",
-  },
-  {
-    id: 3,
-    title: "Doner Kebab",
-    subTitle: "Kebab",
-    rating: 5,
-    imageSource: donerKebabImage,
-    href: "/",
-  },
-  {
-    id: 4,
-    title: "Salmon Roll",
-    subTitle: "Salmon",
-    rating: 4,
-    imageSource: salmonRollImage,
-    href: "/",
-  },
-  {
-    id: 5,
-    title: "Cupcake Choco",
-    subTitle: "Cupcake",
-    rating: 4,
-    imageSource: cupcakeChocoImage,
-    href: "/",
-  },
-  {
-    id: 6,
-    title: "Doughnut Milk",
-    subTitle: "Doughnut",
-    rating: 5,
-    imageSource: doughnutMilkImage,
-    href: "/",
-  },
-  {
-    id: 7,
-    title: "Doughnut Unicorn",
-    subTitle: "Doughnut",
-    rating: 4,
-    imageSource: doughnutUnicornImage,
-    href: "/",
-  },
-  {
-    id: 8,
-    title: "Kathi Kebab",
-    subTitle: "Kebab",
-    rating: 4,
-    imageSource: kathiKebabImage,
-    href: "/",
-  },
-];
-
-const Home = () => {
+const Home = ({ TRENDING_RECEIPT_LIST, CATEGORY_RECEIPT_LIST }) => {
   return (
     <>
       <section className="relative mt-8 grid grid-rows-[max-content_1fr] items-center gap-24 overflow-hidden px-8 pb-5 lg:grid-cols-[1fr_1fr] xl:px-0">
@@ -291,6 +181,121 @@ const Home = () => {
       </section>
     </>
   );
+};
+
+export const getStaticProps = async () => {
+  return {
+    props: {
+      TRENDING_RECEIPT_LIST: [
+        {
+          id: 1,
+          title: "Pizza Paperoni",
+          subTitle: "Pizza",
+          rating: 4,
+          imageSource: pizzaPaperonImage,
+          href: "/",
+        },
+        {
+          id: 2,
+          title: "Pizza Meat",
+          subTitle: "Pizza",
+          rating: 3,
+          imageSource: pizzaMeatImage,
+          href: "/",
+        },
+        {
+          id: 3,
+          title: "Doner Kebab",
+          subTitle: "Kebab",
+          rating: 5,
+          imageSource: donerKebabImage,
+          href: "/",
+        },
+        {
+          id: 4,
+          title: "Salmon Roll",
+          subTitle: "Salmon",
+          rating: 4,
+          imageSource: salmonRollImage,
+          href: "/",
+        },
+        {
+          id: 5,
+          title: "Cupcake Choco",
+          subTitle: "Cupcake",
+          rating: 4,
+          imageSource: cupcakeChocoImage,
+          href: "/",
+        },
+        {
+          id: 6,
+          title: "Doughnut Milk",
+          subTitle: "Doughnut",
+          rating: 5,
+          imageSource: doughnutMilkImage,
+          href: "/",
+        },
+        {
+          id: 7,
+          title: "Doughnut Unicorn",
+          subTitle: "Doughnut",
+          rating: 4,
+          imageSource: doughnutUnicornImage,
+          href: "/",
+        },
+        {
+          id: 8,
+          title: "Kathi Kebab",
+          subTitle: "Kebab",
+          rating: 4,
+          imageSource: kathiKebabImage,
+          href: "/",
+        },
+      ],
+      CATEGORY_RECEIPT_LIST: [
+        {
+          id: 1,
+          title: "Cupcake",
+          amount: 22,
+          icon: cakeIcon,
+          bgColorHex: "#F0FEEB",
+          href: "/",
+        },
+        {
+          id: 2,
+          title: "Pizza",
+          amount: 25,
+          icon: pizzaIcon,
+          bgColorHex: "#E4F2F4",
+          href: "/",
+        },
+        {
+          id: 3,
+          title: "Kebab",
+          amount: 12,
+          icon: kebabIcon,
+          bgColorHex: "#EAEEFA",
+          href: "/",
+        },
+        {
+          id: 4,
+          title: "Salmon",
+          amount: 22,
+          icon: salmonIcon,
+          bgColorHex: "#F9EEF3",
+          href: "/",
+        },
+        {
+          id: 5,
+          title: "Doughnut",
+          amount: 11,
+          icon: doughnutIcon,
+          bgColorHex: "#F3F7D9",
+          href: "/",
+        },
+      ],
+    },
+  };
 };
 
 export default Home;
