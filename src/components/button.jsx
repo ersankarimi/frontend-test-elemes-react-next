@@ -1,6 +1,11 @@
 import cn from "classnames";
 
-export const Button = ({ children = null, variant = "primary", ...props }) => {
+export const Button = ({
+  children = null,
+  variant = "primary",
+  shadow = false,
+  ...props
+}) => {
   return (
     <button
       type="button"
@@ -10,8 +15,9 @@ export const Button = ({ children = null, variant = "primary", ...props }) => {
         {
           "bg-brand-primary-default text-white hover:brightness-110":
             variant === "primary",
-          "bg-[#F2F2F2] text-[#333333] hover:brightness-90":
+          "bg-[#F2F2F2] text-brand-gray-dark hover:brightness-90":
             variant === "secondary",
+          "shadow-[0px_8px_32px_rgba(102,107,226,0.35)]": shadow,
         }
       )}
     >
