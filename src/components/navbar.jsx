@@ -36,7 +36,7 @@ const NAVLINKS = [
 
 export const Navbar = () => {
   return (
-    <header className="sticky left-0 top-0 flex items-center justify-between gap-6 bg-white px-8 py-6 shadow-sm xl:px-0">
+    <header className="sticky left-0 top-0 z-50 flex items-center justify-between gap-6 bg-white px-8 py-6 shadow-sm xl:px-0">
       <Link href="/">
         <picture className="block h-9 max-h-9 w-full sm:w-[150px] lg:h-[50px] lg:max-h-[50px] lg:w-[207px]">
           <Image
