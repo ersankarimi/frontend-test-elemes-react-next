@@ -22,7 +22,7 @@ export const TrendingReceiptCard = ({
   return (
     <Link
       href={href}
-      className="group relative flex flex-col gap-[19px] rounded-[17px] px-5 py-8"
+      className="group relative flex flex-col gap-[19px] overflow-hidden rounded-[17px] px-5 py-8 shadow-[0px_11px_39px_rgba(0,0,0,0.07)]"
       style={{
         backgroundColor: colorsCategoryObj[subTitle],
       }}
