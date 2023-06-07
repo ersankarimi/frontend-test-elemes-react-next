@@ -199,7 +199,7 @@ const Home = () => {
           </div>
           <div className="flex items-center gap-4">
             <Link href="/">
-              <Button>Daftar Sekarang</Button>
+              <Button shadow>Daftar Sekarang</Button>
             </Link>
 
             <Link href="/">
