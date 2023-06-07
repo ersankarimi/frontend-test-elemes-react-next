@@ -1,38 +1,91 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Test | Elemes Group
 
-## Getting Started
+Ini adalah test untuk melamar posisi Frontend Engineer Intern di Elemes Group. Pada test kali ini saya diminta untuk membuat website desktop dan mobile responsive seperti yang sudah
+ada di [Figma](https://www.figma.com/file/VXBvQvCeLRs65i4cLhihEi/Frontend-Test?node-id=0%3A1).
 
-First, run the development server:
+## Links
+
+- Repo Github: [https://github.com/ersankarimi/frontend-test-elemes-react-next](https://github.com/ersankarimi/frontend-test-elemes-react-next)
+- Link Demo (Vercel): [https://frontend-test-elemes-react-next.vercel.app/](https://frontend-test-elemes-react-next.vercel.app/)
+
+## Teknologi yang digunakan
+
+Pada test kali ini saya menggunakan beberapa teknologi, yaitu:
+
+- [ReactJS](https://reactjs.org/)
+- [NextJS](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- Tools tambahan:
+  - [Classnames](https://github.com/JedWatson/classnames#readme)
+  - [ESLint](https://eslint.org/)
+  - [Prettier](https://prettier.io/)
+
+## Skrip yang tersedia
+
+Pada project ini, tersedia beberapa skrip yang dapat digunakan, yaitu:
+
+Menjalankan project di mode development:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Menjalankan project di mode production:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+npm run start
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Build project:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Linting:
 
-## Learn More
+```bash
+npm run lint
+```
 
-To learn more about Next.js, take a look at the following resources:
+Format:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run format
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Lint, fix, dan format:
 
-## Deploy on Vercel
+```bash
+npm run lint:fix:format
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Cara menjalankan project
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Untuk menjalankan project ini, dapat dilakukan dengan cara:
+
+1. Clone repository ini dengan cara:
+
+```bash
+git clone
+```
+
+2. Install dependencies dengan cara:
+
+```bash
+npm install
+```
+
+3. Jalankan project di mode development dengan cara:
+
+```bash
+npm run dev
+```
+
+4. Buka [http://localhost:3000](http://localhost:3000) untuk melihat hasilnya.
+5. Untuk menjalankan project di mode production, dapat dilakukan dengan cara:
+
+```bash
+npm run build
+npm run start
+```
