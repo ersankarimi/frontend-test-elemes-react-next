@@ -4,14 +4,13 @@ import Link from "next/link";
 import {
   Button,
   CategoryReceiptCard,
+  HorizontalScrollingWithButtons,
   Stars,
   TrendingReceiptCard,
 } from "@/components";
 
 import cakeIcon from "../../public/icons/cake.svg";
 import doughnutIcon from "../../public/icons/doughnut.svg";
-import fillLeftIcon from "../../public/icons/fill-left.svg";
-import fillRightIcon from "../../public/icons/fill-right.svg";
 import kebabIcon from "../../public/icons/kebab.svg";
 import pizzaIcon from "../../public/icons/pizza.svg";
 import salmonIcon from "../../public/icons/salmon.svg";
@@ -20,8 +19,6 @@ import donerKebabImage from "../../public/images/doner-kebab.png";
 import doughnutMilkImage from "../../public/images/doughnut-milk.png";
 import doughnutUnicornImage from "../../public/images/doughnut-unicorn.png";
 import heroAccent100 from "../../public/images/hero-accent-100.png";
-// eslint-disable-next-line no-unused-vars
-import heroAccent from "../../public/images/hero-accent.png";
 import heroBowlImage from "../../public/images/hero-bowl.png";
 import kathiKebabImage from "../../public/images/kathi-kebab.png";
 import pizzaMeatImage from "../../public/images/pizza-meat.png";
@@ -62,7 +59,7 @@ const Home = ({ TRENDING_RECEIPT_LIST, CATEGORY_RECEIPT_LIST }) => {
                   </div>
                   <Stars
                     fillStarNumber={4}
-                    prefixKey="card-profile-hero-tomato"
+                    prefixKey="card-profile-hero-tomato-mobile"
                   />
                 </div>
               </div>
@@ -139,23 +136,20 @@ const Home = ({ TRENDING_RECEIPT_LIST, CATEGORY_RECEIPT_LIST }) => {
           <h2 className="text-brand-primary-default">Receipt</h2>
         </div>
         <div className="flex flex-col gap-10">
-          <div className="grid auto-cols-max grid-flow-col gap-[10px] overflow-x-auto py-4">
-            {[...CATEGORY_RECEIPT_LIST, ...CATEGORY_RECEIPT_LIST].map(
-              (category) => (
-                <CategoryReceiptCard key={category.id} {...category} />
-              )
-            )}
-          </div>
-          <div className="bottom-0 left-0 right-0 hidden place-content-end items-center gap-3 md:flex">
-            <Button>
-              <Image src={fillLeftIcon} alt="Fill Left Icon" />
-              Prev
-            </Button>
-            <Button>
-              Next
-              <Image src={fillRightIcon} alt="Fill Left Icon" />
-            </Button>
-          </div>
+          <HorizontalScrollingWithButtons>
+            {/* 
+              Avoid to the same key, so we add 10 to the id
+            */}
+            {[
+              ...CATEGORY_RECEIPT_LIST.map((item) => ({
+                ...item,
+                id: item.id + 10,
+              })),
+              ...CATEGORY_RECEIPT_LIST,
+            ].map((category) => (
+              <CategoryReceiptCard key={category.id} {...category} />
+            ))}
+          </HorizontalScrollingWithButtons>
         </div>
       </section>
 
