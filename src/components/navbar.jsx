@@ -47,7 +47,7 @@ export const Navbar = () => {
         </picture>
       </Link>
 
-      <ul className="hidden items-center gap-4 md:flex lg:gap-8">
+      <ul className="hidden items-center gap-3.5 md:flex lg:gap-8">
         {NAVLINKS.map((navlink) => (
           <NavlinkItem key={`navlink-item-${navlink.label}`} {...navlink} />
         ))}
